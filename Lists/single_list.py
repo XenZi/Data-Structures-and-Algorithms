@@ -75,11 +75,11 @@ class SingleList:
     '''
 
     def add_first(self, value):
-        new_node = Node(value) # creating a new node with initial new_node.next = None
+        new_node = Node(value) 
         if self.is_empty():
-            self._tail = new_node # if list is empty, here we gonna make tail same as the head
+            self._tail = new_node 
         else:
-            new_node.next = self._head # if list is not empty, new_node.next is current self._head and it becomes a second element
+            new_node.next = self._head 
         self._head = new_node
         self._size += 1
     
