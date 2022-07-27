@@ -26,11 +26,11 @@ def is_matching(expression):
 
     stack = Stack()
 
-    for char in expression:         # for za svaki character u expressionu
-        if char in left_side:       # ukoliko je char otvorena zagrada, ona se nalazi u stringu left_side
-            stack.push(char)        # ako je uslov ispunjen, u stack prebaciti char
-        elif char in right_side:    # ukoliko je char zatvorne zagrada
-            if stack.is_empty():    # ukoliko je stack prazan, odnosno vise nema znakova, stack je false
+    for char in expression:    
+        if char in left_side:      
+            stack.push(char)       
+        elif char in right_side:   
+            if stack.is_empty():   
                 return False
             if right_side.index(char) != left_side.index(stack.pop()):
                 return False
