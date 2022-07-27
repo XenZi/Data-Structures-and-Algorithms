@@ -15,10 +15,10 @@
 
 class Stack:
     def __init__(self) -> None:
-        self._data = []         # Creating empty array to store data in it
+        self._data = []   
 
     def __len__(self):
-        return len(self._data)  # Allowing Python to access len of the data with len
+        return len(self._data)
 
     def is_empty(self):
         return len(self._data) == 0
@@ -32,8 +32,8 @@ class Stack:
     def pop(self):
         if self.is_empty():
             raise Exception("Error") 
-        el = self.top() # Taking top element and saving it for the late return
-        self._data.pop() # Poping up it from array
+        el = self.top()
+        self._data.pop()
         return el
 
     def __str__(self) -> str:
